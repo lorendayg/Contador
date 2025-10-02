@@ -1,0 +1,32 @@
+{
+  "name": "unidad1",
+  "version": "1.0.0",
+  "description": "entorno de desarrollo",
+  "main": "index.js",
+  "scripts": {
+  "kill-port": "powershell -Command \"Get-Process -Id (Get-NetTCPConnection -LocalPort 3000).OwningProcess | Stop-Process -Force\"",
+  "dev": "npm run kill-port && webpack serve --mode development --open",
+  "build": "webpack --mode production"
+}
+,
+  "author": "diego",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.28.3",
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.102.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.8",
+    "sass": "^1.92.1",
+    "sass-loader": "^16.0.5"
+  }
+}
